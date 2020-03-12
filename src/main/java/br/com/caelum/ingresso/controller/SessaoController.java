@@ -1,7 +1,6 @@
 package br.com.caelum.ingresso.controller;
 
 import java.util.List;
-
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,7 +15,7 @@ import br.com.caelum.ingresso.dao.SalaDao;
 import br.com.caelum.ingresso.dao.SessaoDao;
 import br.com.caelum.ingresso.model.Sessao;
 import br.com.caelum.ingresso.model.form.SessaoForm;
-import br.com.caelum.ingresso.validacao.GerenciadorDeSessao;
+import br.com.caelum.ingresso.validation.GerenciadorDeSessao;
 
 @Controller
 public class SessaoController {
