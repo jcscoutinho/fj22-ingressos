@@ -149,5 +149,10 @@
             </plugin>
         </plugins>
     </build>
-
+    <developers>
+	<developer>
+	    <name>Julio Souza</name>
+	    <email>jcs.caesar@gmail.com</email>
+	</developer>
+    </developers>
 </project>
