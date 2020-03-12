@@ -4,11 +4,10 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
-import java.util.stream.Stream;
-
 import br.com.caelum.ingresso.model.Sessao;
 
 public class GerenciadorDeSessao {
+	
 	
 	private List<Sessao> sessoesDaSala;
 	
@@ -21,13 +20,6 @@ public class GerenciadorDeSessao {
 			return false;
 		}
 		
-		Stream<Sessao> stream = sessoesDaSala.stream();
-		
-		for (Sessao sessaoDoCinema : sessoesDaSala) {
-			if (horarioIsConflitante(sessaoDoCinema, sessaoNova)) {
-				return false;
-			}
-		}
 		return sessoesDaSala.stream().noneMatch(sessaoExistente -> horarioIsConflitante(sessaoExistente, sessaoNova));
 	}
 
@@ -56,7 +48,7 @@ public class GerenciadorDeSessao {
 		if (sessaoNovaTerminaAntesDaExistente || sessaoNovaComecaDepoisDaExistente) {
 			return false;
 		}
-		return false;
+		return true;
 	}
 	
 	private LocalDateTime getInicioSessaoComDiaDeHoje(Sessao sessao) {
